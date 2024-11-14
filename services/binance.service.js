@@ -30,11 +30,10 @@ class BinanceService {
 
     isValidArticle(article) {
         const keywords = ['Launch', 'Add', 'List'];
-        // return (
-        //     !this.processedArticles.has(article.id) &&
-        //     keywords.some(keyword => article.title.includes(keyword))
-        // );
-        return true;
+        return (
+            !this.processedArticles.has(article.id) &&
+            keywords.some(keyword => article.title.includes(keyword))
+        );
     }
 
     async initialize() {
